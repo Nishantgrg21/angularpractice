@@ -10,6 +10,9 @@ import { ServicesComponent } from './pages/services/services.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ChildComponentComponent } from './child/child-component/child-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFomComponent } from './reactive-fom/reactive-fom.component';  
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     ServicesComponent,
     HomeComponent,
-    ChildComponentComponent
+    ChildComponentComponent,
+    TemplateFormComponent,
+    ReactiveFomComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     
 
   ],

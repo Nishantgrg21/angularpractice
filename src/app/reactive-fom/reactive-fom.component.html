@@ -1,0 +1,30 @@
+
+<div class="container mt">
+    <h3>Reactive Form in angular</h3>
+    <form [formGroup]='myForm' (ngSubmit)="sendData()">
+        <p>
+            <label for="username">UserName</label>
+            <input type="text" class="form-control" name="username" id="username" formControlName="username" >
+            <span *ngIf="myForm.get('username')?.touched && myForm.get('username')?.hasError('required')">Enter the Username</span>
+        </p>
+
+        <p>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" formControlName="email">
+            <span *ngIf="myForm.get('email')?.touched && myForm.get('email')?.hasError('required')">Enter the Email</span>
+            <span *ngIf="myForm.get('email')?.touched && myForm.get('email')?.hasError('email')">Enter the Valid Email</span>
+        </p>
+
+        <p>
+            <label for="number">Mobile Number</label>
+            <input type="text" class="form-control" name="number" id="number" formControlName="mobnumber">
+            <span *ngIf="myForm.get('mobnumber')?.touched && myForm.get('mobnumber')?.hasError('required')">Enter the Mobile Number</span>
+        </p>
+       
+      
+        <p>
+            <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+        </p>
+
+    </form>
+</div>

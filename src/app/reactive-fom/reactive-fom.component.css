@@ -1,0 +1,7 @@
+.mt{
+    margin-top: 50px;
+}
+
+input.ng-touched.ng-invalid {
+    border:1px solid red;
+}

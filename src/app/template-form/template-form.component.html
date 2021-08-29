@@ -1,0 +1,33 @@
+<div class="container mt">
+    <h3>Template Driven Form</h3>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <p>
+            <label for="username">UserName</label>
+            <input type="text" class="form-control" name="username" id="username" ngModel>
+        </p>
+
+        <p>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" ngModel>
+        </p>
+
+        <p>
+            <label for="number">Mobile Number</label>
+            <input type="text" class="form-control" name="number" id="number" ngModel>
+        </p>
+        <p>
+            <label for="gender">Gender</label>
+            <input type="radio" value="male" id="gender" name="gender" ngModel> Male
+            <input type="radio" value="female" id="gender" name="gender" ngModel> Female
+        </p>
+      
+        <p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+
+    </form>
+</div>
+
+<p>Valid : {{myForm.valid}} </p>
+<p>Touched : {{myForm.touched  }} </p>
+<p>Submitted : {{myForm.submitted  }} </p>
