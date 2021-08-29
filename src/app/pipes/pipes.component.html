@@ -1,0 +1,28 @@
+
+<div class="container mt">
+    <h3>Pipes in Angular</h3>
+    <p>{{name}}</p>
+    <p>{{message | lowercase}}</p>   <!--Lowercase Pipes-->
+    <p>{{message | uppercase}}</p>   <!--Uppercase Pipes-->
+    <p>{{message | titlecase}}</p>    <!--first letter capital -->
+    <p>{{message | slice:3}}</p>    <!--remove the first three letters using the slices-->
+    <p>{{message | slice:3:9}}</p>    <!--remove the first three letters and remove all leters after 9 digit using the slices-->
+    <p>{{person | json}}</p>  
+
+    <p>{{5.78525623 | number:'2.3-4'}}</p>
+    <p>{{5.78525623 | number:'3.4-5'}}</p>
+
+    <p>{{0.50 | percent}}</p>
+    <p>{{0.23 | percent}}</p>
+
+    <p>{{0.23 | currency}}</p>
+    <p>{{45000 | currency}}</p>
+    <p>{{7600 | currency : 'INR'}}</p>
+
+    <p>{{ date}}</p>
+    <p>{{ date | date: 'short'}}</p>
+    <p>{{ date | date: 'shortDate'}}</p>
+    <p>{{ date | date: 'shortTime'}}</p>
+    <p>{{ date | date: 'long' }}</p>
+
+</div>

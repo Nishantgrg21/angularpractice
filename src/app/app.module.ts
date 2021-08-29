@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFomComponent } from './reactive-fom/reactive-fom.component';  
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HomeComponent,
     ChildComponentComponent,
     TemplateFormComponent,
-    ReactiveFomComponent
+    ReactiveFomComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
