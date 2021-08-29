@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFomComponent } from './reactive-fom/reactive-fom.component';  
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ReactiveFomComponent } from './reactive-fom/reactive-fom.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     
 
   ],

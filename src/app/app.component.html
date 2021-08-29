@@ -4,5 +4,27 @@
 <!-- <app-template-form></app-template-form> -->
 
  
-<app-reactive-fom></app-reactive-fom>
+<!-- <app-reactive-fom></app-reactive-fom> -->
 
+
+<div class="container">
+    <h3>Get Dta Through Api</h3>
+    <table class='table'>
+        <thead>
+          <tr>
+            <th>userId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of dataFetch ">
+            <td>{{user.userId}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.title}}</td>
+            <td>{{user.completed}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
