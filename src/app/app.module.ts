@@ -14,6 +14,7 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFomComponent } from './reactive-fom/reactive-fom.component';  
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    Ng2SearchPipeModule,
     
 
   ],

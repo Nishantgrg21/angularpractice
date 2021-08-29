@@ -10,6 +10,8 @@ import { CrudOperationService } from './crud-operation.service';
 export class AppComponent {
   title = 'myapp';
 
+  filterTerm!: string; // Add a ng2-search Filter
+
   dataFetch: any = [];
 
   constructor(private user : CrudOperationService){
