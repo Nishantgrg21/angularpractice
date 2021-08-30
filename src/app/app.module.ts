@@ -38,6 +38,7 @@ import { PipesComponent } from './pipes/pipes.component';
     HttpClientModule,
     Ng2SearchPipeModule,
     
+    
 
   ],
   providers: [],

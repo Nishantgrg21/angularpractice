@@ -17,7 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'Contact' , component: ContactComponent
-  }
+  },
+  
+  { path: 'lazyLoad', loadChildren: () => import('./lazy-load/lazy-load.module').then(m => m.LazyLoadModule) }
 ];
 
 @NgModule({
