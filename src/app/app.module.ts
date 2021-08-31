@@ -16,6 +16,9 @@ import { ReactiveFomComponent } from './reactive-fom/reactive-fom.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PipesComponent } from './pipes/pipes.component';
+import { BookService } from './book.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { TestData } from './testData';
 
 @NgModule({
   declarations: [
@@ -37,11 +40,13 @@ import { PipesComponent } from './pipes/pipes.component';
     FormsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
+    InMemoryWebApiModule.forRoot(TestData)  
+
     
     
 
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

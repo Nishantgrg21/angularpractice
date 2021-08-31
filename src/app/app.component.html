@@ -6,14 +6,28 @@
  
 <!-- <app-reactive-fom></app-reactive-fom> -->
 
-<app-pipes></app-pipes>
+<!-- <app-pipes></app-pipes> -->
 
+<app-home></app-home>
 
+<div class="container mt">
+  <h3>{{title}}</h3>
+  <div class="row">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+    </div>
+      <ul>
+          <li *ngFor="let bookdata of softBooks | filter:filterTerm">
+              Id = {{bookdata.id}}, Name = {{bookdata.name}}, Category = {{bookdata.category}}
+
+          </li>
+      </ul>
+  </div>
+  
+</div>
 
 <!--Get data from api-->
-
-
-<div class="container">
+<!-- <div class="container">
     <h3>Get Dta Through Api</h3>
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
@@ -36,4 +50,4 @@
           </tr>
         </tbody>
       </table>
-</div>
+</div> -->
