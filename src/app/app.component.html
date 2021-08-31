@@ -12,13 +12,33 @@
 <div class="container mt">
   <h3>{{title}}</h3>
   <div class="row">
-    
-      <ul>
+    <!--Method -1 -  Observable & Subscribe  -->
+      <!-- <ul>
           <li *ngFor="let bookdata of softBooks | async">
               Id = {{bookdata.id}}, Name = {{bookdata.name}}, Category = {{bookdata.category}}
 
           </li>
-      </ul>
+      </ul> -->
+
+
+      <!--Method 2 -  Observable and subscribe With Async and Pipes -->
+      <!-- <ul>
+        <li *ngFor="let bookdata of softBooks | async">
+            Id = {{bookdata.id}}, Name = {{bookdata.name}}, Category = {{bookdata.category}}
+
+        </li>
+    </ul> -->
+
+    <!--Method 3 -  Observable and Subscribe with Async Pipe and ngIf-->
+    <div *ngIf="softBooks | async as onebook; else loading">
+      Id = {{onebook.id}}, Name = {{onebook.name}}, Category = {{onebook.category}}
+    </div>
+
+    <ng-template #loading>
+      <img src="../assets/loading.gif" alt=";loading image" style="width: 250px;">
+    </ng-template>
+
+
   </div>
   
 </div>

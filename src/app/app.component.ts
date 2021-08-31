@@ -44,17 +44,26 @@ export class AppComponent {
 
  
  
-  //Method 2 -  Observable and Async and Pipes 
-  softBooks!: Observable<Book[]>;
+  //Method 2 -  Observable and subscribe With Async and Pipes 
+  // softBooks!: Observable<Book[]>;
+  // getSoftBook(){
+  //   this.softBooks = this.bookservice.getBookFromStore();
+  // }
+
+  //  ngOnInit(): void {
+  //   this.getSoftBook();
+  // }
+
+
+  //Method 3 -  Observable and Subscribe with Async Pipe and ngIf
+  softBooks!: Observable<Book>;
   getSoftBook(){
-    this.softBooks = this.bookservice.getBookFromStore();
+    this.softBooks = this.bookservice.getBookFromStore(100);
   }
 
    ngOnInit(): void {
     this.getSoftBook();
   }
-
-
 
 
   
