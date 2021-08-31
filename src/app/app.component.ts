@@ -4,6 +4,7 @@ import { CrudOperationService } from './crud-operation.service';
 import { Book } from './book';
 import { BookService } from './book.service';
 import { Observable } from 'rxjs';
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -56,18 +57,24 @@ export class AppComponent {
 
 
   //Method 3 -  Observable and Subscribe with Async Pipe and ngIf
-  softBooks!: Observable<Book>;
+  // softBooks!: Observable<Book>;
+  // getSoftBook(){
+  //   this.softBooks = this.bookservice.getBookFromStore(100);
+  // }
+
+  //  ngOnInit(): void {
+  //   this.getSoftBook();
+  // }
+
+  //Method 4 -  Observable method -> map
+  softBooks!: Observable<string>;
+
   getSoftBook(){
-    this.softBooks = this.bookservice.getBookFromStore(100);
-  }
-
+      this.softBooks = this.bookservice.getBookFromStore(103).pipe(map(book=>book.name));
+   }
    ngOnInit(): void {
-    this.getSoftBook();
-  }
-
-
-  
-
+     this.getSoftBook();
+   }
 
 
 

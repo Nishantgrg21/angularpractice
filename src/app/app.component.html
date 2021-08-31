@@ -30,13 +30,20 @@
     </ul> -->
 
     <!--Method 3 -  Observable and Subscribe with Async Pipe and ngIf-->
-    <div *ngIf="softBooks | async as onebook; else loading">
+    <!-- <div *ngIf="softBooks | async as onebook; else loading">
       Id = {{onebook.id}}, Name = {{onebook.name}}, Category = {{onebook.category}}
     </div>
 
     <ng-template #loading>
       <img src="../assets/loading.gif" alt=";loading image" style="width: 250px;">
-    </ng-template>
+    </ng-template> -->
+
+
+    <!--Method 4 - > Observable map method-->
+
+    <div *ngIf="softBooks | async as bookname">
+      {{bookname}}
+    </div>
 
 
   </div>
