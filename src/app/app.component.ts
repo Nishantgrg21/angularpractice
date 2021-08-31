@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CrudOperationService } from './crud-operation.service';
 import { Book } from './book';
 import { BookService } from './book.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -26,17 +27,37 @@ export class AppComponent {
 
 
   title="Observable Tutorials ";
-  softBooks!: Book[];
+ 
 
   constructor( private bookservice:BookService) { }
 
-  getSoftBooks(){
-    this.bookservice.getBookFromStore().subscribe((books: any[])=>this.softBooks=books);
+
+  //Method 1 - Observable & Subscribe 
+
+  // softBooks!: Book[];
+  // getSoftBooks(){
+  //   this.bookservice.getBookFromStore().subscribe((books: any[])=>this.softBooks=books);
+  // }
+  // ngOnInit(): void {
+  //   this.getSoftBooks();
+  // }
+
+ 
+ 
+  //Method 2 -  Observable and Async and Pipes 
+  softBooks!: Observable<Book[]>;
+  getSoftBook(){
+    this.softBooks = this.bookservice.getBookFromStore();
   }
 
-  ngOnInit(): void {
-    this.getSoftBooks();
+   ngOnInit(): void {
+    this.getSoftBook();
   }
+
+
+
+
+  
 
 
 
